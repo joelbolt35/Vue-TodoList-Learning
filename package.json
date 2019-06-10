@@ -19,6 +19,7 @@
     "underscore": "^1.9.1",
     "uuid": "^3.3.2",
     "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
     "vue-underscore": "^0.1.4"
   },
   "devDependencies": {

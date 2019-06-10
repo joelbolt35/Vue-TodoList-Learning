@@ -9,7 +9,7 @@
             {{todo.title}}
             <button 
             class="del" 
-            @click="$emit('del-todo', todo.id)">x</button>
+            v-on:click="$emit('del-todo', todo.id)">x</button>
         </p>
     </div>
 </template>

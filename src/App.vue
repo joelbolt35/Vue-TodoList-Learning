@@ -1,57 +1,20 @@
 <template>
   <div id="app">
     <Header />
-    <AddTodo 
-    v-on:add-todo="addTodoFunc"/>
-    <Todos 
-    v-bind:list="todos_list"
-    v-on:del-todo="deleteTodo"
-    />
+    <router-view/>
   </div>
 </template>
 
 <script>
 import Header from './components/layout/Header'
-import Todos from './components/Todos'
-import AddTodo from './components/AddTodo'
-var jsonPath = require('JSONPath');
-
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    Header,
-    Todos,
-    AddTodo
-  },
-  data() {
-    return {
-      todos_list: []
-    }
-  },
-  methods: {
-    deleteTodo(id) {
-      this.todos_list = this.todos_list.filter(todo => todo.id !== id);
-    },
-    addTodoFunc(object) {
-      this.todos_list.push(object);
-    }
-  },
-  created() {
-    fetch("https://jsonplaceholder.typicode.com/todos", {
-      "method": "GET"
-    })
-    .then(response => response.json())
-    .then(myJson => {
-      console.log(myJson);
-      JSONPath(myJson, '$.1');
-
-    })
-    .catch(err => {
-      console.log(err);
-    });
-  }
+    Header
+  }  
 }
 </script>
+
 
 <style>
   * {

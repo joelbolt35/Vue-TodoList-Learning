@@ -16,7 +16,7 @@
     "jsonpath": "^1.0.2",
     "jsonpath-plus": "^0.20.0",
     "static-eval": "^2.0.2",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "uuid": "^3.3.2",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
